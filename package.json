@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "cross-env": "^5.1.4",
-    "electron": "^2.0.0-beta.4"
+    "electron": "^2.0.0-beta.4",
+    "electron-devtools-installer": "^2.2.3"
   },
   "dependencies": {
     "buglog": "^1.0.0",
