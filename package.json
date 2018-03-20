@@ -7,16 +7,45 @@
   "license": "CC0-1.0",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
-    "dev": "cross-env NODE_ENV=development DEBUG=platform-assistant:* yarn start"
+    "predev": "yarn compile",
+    "dev": "cross-env NODE_ENV=development DEBUG=platform-assistant:* yarn start",
+    "compile": "babel src --out-dir dist",
+    "postcompile": "cp src/index.html dist/",
+    "prestart": "yarn compile",
+    "start": "electron ."
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-fs": "^2.0.0",
+    "cli": "^1.0.1",
     "cross-env": "^5.1.4",
     "electron": "^2.0.0-beta.4",
-    "electron-devtools-installer": "^2.2.3"
+    "electron-mocha": "^6.0.1",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "mocha-testdata": "^1.2.0",
+    "spec-xunit-file": "^0.0.1-3"
   },
   "dependencies": {
     "buglog": "^1.0.0",
-    "chalk": "^2.3.2"
+    "chalk": "^2.3.2",
+    "cross-unzip": "^0.2.1",
+    "rimraf": "^2.6.2",
+    "semver": "^5.5.0"
   }
 }

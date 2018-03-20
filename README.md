@@ -4,6 +4,9 @@
 
 This is a Electron application that maintains tools across OS.
 
+## References
+- [Chrome DevTools Extension](https://developer.chrome.com/extensions/devtools)- used to extend the ability of devtools for debugging popular web frameworks.
+
 ## Resources for Learning Electron
 
 - [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation

@@ -1,12 +1,14 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
-const os = require('os');
+import os from 'os';
 
-const chalk = require('chalk');
-const buglog = require('buglog');
+import chalk from 'chalk';
+import buglog from 'buglog';
 
 const log = buglog('renderer');
+const osType = os.type();
+const osPlatform = os.platform();
 
 log('\n\n');
 log(`\tProcess ID (pid):\t${chalk.yellow(process.pid)}`);
@@ -17,4 +19,4 @@ log(`\tElectron:\t\t${process.versions.electron}`);
 log('\n');
 
 const headerEl = document.getElementById("main-header");
-headerEl.innerHTML = `Running Platform ${os.type()}`;
+headerEl.innerHTML = `Running Platform ${osType}`;
