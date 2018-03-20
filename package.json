@@ -1,0 +1,21 @@
+{
+  "name": "platform-assistant",
+  "version": "0.0.1",
+  "description": "electron application to keep tools updated on multiple platforms.",
+  "repository": "git@github.com:Joaquin6/platform-assistant.git",
+  "author": "Joaquin Briceno <joaquin.briceno@insitu.com>",
+  "license": "CC0-1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "cross-env NODE_ENV=development DEBUG=platform-assistant:* yarn start"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "electron": "^2.0.0-beta.4"
+  },
+  "dependencies": {
+    "buglog": "^1.0.0",
+    "chalk": "^2.3.2"
+  }
+}
