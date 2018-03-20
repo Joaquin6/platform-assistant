@@ -19,7 +19,6 @@ const configureStore = (initialState?: counterStateType) => {
 
   // Logging Middleware
   const logger = createLogger({
-    level: 'info',
     collapsed: true
   });
 
